@@ -12,7 +12,7 @@ function updateLatestOrg(){
 
 		})
 
-	if(currentOrg != "undefined" && currentOrg != ""){
+	if(currentOrg != "undefined" && currentOrg != "" && currentOrg != null){
 		var orgText = "<strong>" + currentOrg.name + "</strong> " + currentOrg.description;
 		document.getElementById('currentorganization').innerHTML=orgText;
 
@@ -50,8 +50,8 @@ function checkLogin(){
 		});
 }
 
-function addOrg(iname, idescription, iaddress, icreator, ipostcode, iphone, iemail){
-	var orgObj = {name:iname, description:idescription, address:iaddress, creator:icreator, postcode:ipostcode, phone:iphone, email:iemail};
+function addOrg(iname, idescription, iaddress, ipostcode, iphone, iemail){
+	var orgObj = {name:iname, description:idescription, address:iaddress, postcode:ipostcode, phone:iphone, email:iemail};
 
 	fetch('/api/organization', {
 		method: 'post',
