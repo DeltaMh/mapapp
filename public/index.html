@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="map.js" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	</head>
+
+	<body>
+		<div id="topbar"  class="notLoggedIn">
+			<a href="login.html" class="toplink" >log in / sign up</a>
+		</div>
+
+		<div id="topbar" class="loggedIn"> 
+			<a href="addorg.html" class="toplink">add organization</a>
+			&emsp;	
+			<a href="delete.html" class="toplink">delete organization</a>
+			&emsp;	
+			<a href="/logout" class="toplink">log out</a>
+		</div>
+
+		<div class="container">
+			<div class="row" id="search">
+				<form id="search-form" action="javascript:search(query.value, type.value, postcode.value)">
+					<div class="form-group col-xs-9">
+						<input class="form-control" type="text" id="query" name="query" placeholder="Search" />
+					</div>
+				</form>
+			</div>
+			<div class="row" id="filter">
+				<form id="search-form" action="javascript:search(query.value, type.value, postcode.value)">
+					<div class="form-group col-sm-6 col-xs-6">
+						<select data-filter="" id="type" name="type" class="filter-type filter form-control">
+							<option value="default">Select Type</option>
+							<option value="default">Show All</option>
+							<option value="NGO">NGO</option>
+							<option value="GOV">Government</option>
+						</select>
+					</div>
+					<div class="form-group col-sm-3 col-xs-6">
+						<input class="form-control" type="text" id="postcode" name="postcode" placeholder="Postcode" />
+					</div>
+					<div class="form-group col-xs-3">
+						<button type="submit" class="btn btn-block btn-primary">Search</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div id="map">
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAihJLwCJxgqYFfuQe4Y26xSEiVVKDxcbk&callback=initMap"></script>
+		</div>
+		<div class="footer" id="currentorganization"></div>
+		<script src="ui.js" charset="utf-8"></script>
+	</body>
+</html>

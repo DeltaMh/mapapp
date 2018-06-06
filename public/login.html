@@ -1,0 +1,38 @@
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Login</title>
+
+	</head>
+	<body>
+
+		<div id="topbar">
+			<a href="/">Back to frontpage</a>
+		</div>
+
+		<div id="loginforms">
+			<h2>Login</h2>
+			<form id="formJoin"  action="/login" method="post">
+				<input type="text" placeholder="Username" name="username" id="username" class="form-control">
+				<input type="password" placeholder="Password" name="password" class="form-control">
+				<input type="submit" style="visibility: hidden; display: none;" />
+			</form>
+			<br>
+			<br>
+			<h2>Create new user</h2>
+			<form id="formJoin" action="/createuser" method="post">
+				<input type="text" placeholder="Username" name="username" id="username" class="form-control">
+				<input type="password" placeholder="Password" name="password" class="form-control">
+				<input type="password" placeholder="Type Password Again" name="password2" class="form-control">
+				<input type="submit" style="visibility: hidden; display: none;" />
+			</form>
+		</div>
+		<div class="footer" id="currentorganization"></div>
+		<script src="ui.js" charset="utf-8"></script>
+	</body>
+</html>

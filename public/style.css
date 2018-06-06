@@ -1,0 +1,45 @@
+body {
+	padding-top: 50px;
+	height: 100%;
+}
+
+html{
+	height: 100%;
+}
+
+#map {
+	height: 100% !important;
+	padding-bottom: 50%;
+	position: relative;
+	width: 100%;
+}
+
+#topbar {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+}
+
+#loginforms {
+	margin: auto;
+	width: 50%;
+}
+
+#addorgform {
+	margin: auto;
+	width: 80%;
+}
+
+.toplink{
+
+}
+
+.footer {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 1rem;
+	background-color: #efefef;
+	text-align: center;
+}
