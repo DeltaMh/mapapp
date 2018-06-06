@@ -1,0 +1,39 @@
+
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Create organization</title>
+	</head>
+	<body>
+		<div id="topbar"  class="notLoggedIn">
+			<a href="login.html" class="toplink" >log in / sign up</a>
+		</div>
+
+		<div id="topbar" class="loggedIn"> 
+			<a href="/" class="toplink">back to frontpage</a>
+			&emsp;	
+			<a href="/logout" class="toplink">log out</a>
+		</div>
+
+		<div id="addorgform">
+			<h2>Add organization</h2>
+			<form id="formOrgs" class="form-inline" action="javascript:addOrg(orgname.value, description.value, orgaddress.value, creator.value, postcode.value, phone.value, email.value)">
+				<input type="text" placeholder="Name" name="orgname" id="orgname" class="form-control">
+				<input type="text" placeholder="Description" name="description" id="description" class="form-control">
+				<input type="text" placeholder="Address" name="orgaddress" id="orgaddress" class="form-control" />
+				<input type="text" placeholder="Postcode" name="postcode" id="postcode" class="form-control" />
+				<input type="text" placeholder="Phone" name="phone" id="phone" class="form-control">
+				<input type="text" placeholder="Email" name="email" id="email" class="form-control" />
+				<input type="submit"  />
+			</form>
+		</div>
+		<div class="footer" id="currentorganization"></div>
+		<script src="ui.js" charset="utf-8"></script>
+	</body>
+
+</html>

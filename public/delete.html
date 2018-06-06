@@ -1,0 +1,27 @@
+
+<html>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Delete Organization</title>
+
+	</head>
+	<body>
+		<div id="topbar">
+			<a href="/">Back to frontpage</a>
+		</div>
+		<div id="loginforms">
+			<h2>Delete organization</h2>
+			<form id="formJoin"  action="/api/deleteorganization" method="post">
+				<input type="text" placeholder="Name" name="name" id="name" class="form-control">
+				<input type="submit"/>
+			</form>
+		</div>
+		<div class="footer" id="currentorganization"></div>
+		<script src="ui.js" charset="utf-8"></script>
+	</body>
+</html>
